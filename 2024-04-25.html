@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Hour - New Relic Hour Error Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .services {
+            background-color: #ffffcc; /* Yellow */
+        }
+        .staff-hub {
+            background-color: #cceeff; /* Blue */
+        }
+        .worker-app-web {
+            background-color: #ccffcc; /* Green */
+        }
+        .notes {
+            background-color: #ffcccc; /* Red */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .error {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>24 Hour - New Relic Report</h2>
+
+<div class="section services">
+    <h3>Services</h3>
+    <p><strong>Error Inbox [Error Count: 6] (<a href="https://onenr.io/0kjnPeNYzwo">https://onenr.io/0kjnPeNYzwo</a>)</strong></p>
+    <ul class="error">
+        <li>
+            <strong>Error</strong><br>
+            HttpError 400<br>
+            directus-prod|2 months old - last seen 1 minute ago<br>
+            —<br>
+            4.67k
+        </li>
+        <li>
+            <strong>firebase_admin.exceptions:InvalidArgumentError</strong><br>
+            Error while calling Auth service (INVALID_PHONE_NUMBER ). TOO_LONG<br>
+            worker-prod|2 months old - last seen about 9 hours ago<br>
+            —<br>
+            16
+        </li>
+        <li>
+            <strong>DirectusError</strong><br>
+            You don't have permission to access this.<br>
+            directus-prod|8 days old - last seen about 2 hours ago<br>
+            —<br>
+            10
+        </li>
+        <li>
+            <strong>DirectusError</strong><br>
+            Invalid payload. The refresh token is required in either the payload or cookie.<br>
+            directus-prod|8 days old - last seen about 2 hours ago<br>
+            —<br>
+            3
+        </li>
+        <li>
+            <strong>Error</strong><br>
+            select "directus_users"."id", "directus_users"."role", "directus_roles"."admin_access", "directus_roles"."app_access" from "directus_users" left join "directus_roles" on "directus_users"."role" = "directus_roles"."id" where "directus_users"."token" = $1 and "status" = $2 limit $3 - Connection terminated unexpectedly<br>
+            directus-prod|7 days old - last seen about 3 hours ago<br>
+            —<br>
+            2
+        </li>
+        <li>
+            <strong>rest_framework.exceptions:ValidationError</strong><br>
+            Expected<br>
+            {'course_id': [ErrorDetail(string='This field is required.', code='required')]}<br>
+            matching-prod|9 months old - last seen about 23 hours ago
+        </li>
+    </ul>
+
+    <p><strong>Directus Database Time Consumed > Top 5 Offenders (<a href="https://chart-embed.service.eu.newrelic.com/herald/3e99c56a-75ad-42ff-b63c-45f570ff6241?height=400px&timepicker=true">https://chart-embed.service.eu.newrelic.com/herald/3e99c56a-75ad-42ff-b63c-45f570ff6241?height=400px&timepicker=true</a>)</strong></p>
+    <ul>
+        <li>76.5K Postgres, , other</li>
+        <li>42K Postgres, information_schema.columns, select</li>
+        <li>25.1K Postgres, pg_index, select</li>
+        <li>19K Postgres, worker_skill_work_experience, insert</li>
+        <li>75.6K Postgres, sourced_job, select</li>
+    </ul>
+
+    <p><strong>Vulnerabilities [Vulnerability Count: 15] (<a href="https://one.eu.newrelic.com/vulnerability-management?account=3895982&duration=1800000&state=a6fb3f46-0e26-343a-e701-5690519b8587">https://one.eu.newrelic.com/vulnerability-management?account=3895982&duration=1800000&state=a6fb3f46-0e26-343a-e701-5690519b8587</a>)</strong></p>
+    <ul>
+        <li>0 Critical vulnerabilities</li>
+        <li>5 High vulnerabilities<br>
+            Entity<br>
+            &emsp;cvjob-prod, python-multipart vulnerable to Content-Type Header ReDoS (CVE-2024-24762)<br>
+            &emsp;cvjob-prod, Duplicate Advisory: Starlette Content-Type Header ReDoS (GHSA-93gm-qmq6-w238)<br>
+            &emsp;cvjob-prod, Duplicate Advisory: FastAPI Content-Type Header ReDoS (GHSA-qf9m-vfgh-m389)<br>
+            3rd party library status<br>
+            &emsp;2 highs fastapi, Current version 0.100.1, Suggested version 0.109.1<br>
+            &emsp;2 highs starlette, Current version 0.27.0, Suggested version 0.36.2<br>
+        </li>
+        <li>10 Other vulnerabilities</li>
+    </ul>
+
+    <p><strong>Instatus [Error Count: 15] (<a href="https://onenr.io/0nQxW4ADajV">https://onenr.io/0nQxW4ADajV</a>)</strong></p>
+    <ul>
+        <li>6 Generic Platform Service (catch all hooked up by back end team)<br>
+            (note 18 service remain un-tracked in new relic)</li>
+        <li>8 Indeed</li>
+        <li>1 Google</li>
+    </ul>
+
+    <p><strong>General Services [Error Count: 315] <a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a></strong></p>
+    <ul>
+        <li>1 Worker</li>
+        <li>8 Job</li>
+        <li>228 Directus</li>
+    </ul>
+</div>
+
+<div class="section staff-hub">
+    <h3>Staff Hub</h3>
+    <p><strong>Error Count: 19 (<a href="https://onenr.io/0qQag3Dz6R1">https://onenr.io/0qQag3Dz6R1</a>)</strong></p>
+    <ul>
+        <li>9 firebase is not defined</li>
+        <li>5 Script error</li>
+        <li>5 pdfjsLib is not defined</li>
+    </ul>
+    <p><strong>Page View Load Times (<a href="https://onenr.io/0qQag3Dz6R1">https://onenr.io/0qQag3Dz6R1</a>)</strong></p>
+    <ul>
+        <li>0.52(s) Average network duration</li>
+        <li>0.75(s) Average page rendering</li>
+        <li>5.56(s) Average dom processing</li>
+    </ul>
+    <p><strong>Valid / invalid events (<a href="https://onenr.io/0qQag3Dz6R1">https://onenr.io/0qQag3Dz6R1</a>)</strong></p>
+    <ul>
+        <li>8 Valid</li>
+        <li>4 Bad</li>
+    </ul>
+    <p><strong>Error Inbox Error groups (5) (<a href="https://onenr.io/0oR8EqeN6jG">https://onenr.io/0oR8EqeN6jG</a>)</strong></p>
+    <ul>
+        <li>
+            Users<br>
+            Occurrences since 24 hours ago<br><br>
+            ReferenceError<br>
+            firebase is not defined<br>
+            fielder|5 months old - last seen 19 minutes ago<br>
+            Session replays<br>
+            0<br>
+            —<br>
+            25
+        </li>
+        <li>
+            F<br>
+            Script error.<br>
+            fielder|3 months old - last seen about 2 hours ago<br>
+            Session replays<br>
+            0<br>
+            —<br>
+            16
+        </li>
+        <li>
+            ReferenceError<br>
+            pdfjsLib is not defined<br>
+            fielder|3 months old - last seen about 2 hours ago<br>
+            Session replays<br>
+            0<br>
+            —<br>
+            16
+        </li>
+        <li>
+            Error<br>
+            NoSuchMethodError: method not found: 'ax' on null<br>
+            fielder|23 days old - last seen 16 minutes ago<br>
+            Session replays<br>
+            0<br>
+            —<br>
+            1
+        </li>
+        <li>
+            Error<br>
+            NoSuchMethodError: method not found: 'ay' on null<br>
+            fielder|23 days old - last seen 16 minutes ago<br>
+            Session replays<br>
+            0
+        </li>
+    </ul>
+</div>
+
+<div class="section worker-app-web">
+    <h3>Worker App Web</h3>
+    <p><strong>Error Count: 45 (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul>
+        <li>45 Connection to Indexed Database server lost. Refresh the page to try again</li>
+    </ul>
+    <p><strong>Page View Load Times (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul>
+        <li>0.34(s) Average network duration</li>
+        <li>0.45(s) Average page rendering</li>
+        <li>2.25(s) Average dom processing</li>
+    </ul>
+    <p><strong>Valid / invalid events (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul>
+        <li>9 Valid</li>
+        <li>3 Bad</li>
+    </ul>
+    <p><strong>Error Inbox Error groups (1) (<a href="https://onenr.io/02R5qNOkrRb">https://onenr.io/02R5qNOkrRb</a>)</strong></p>
+    <ul>
+        <li>
+            Users<br>
+            Occurrences since 24 hours ago<br><br>
+            SecurityError<br>
+            Failed to register a ServiceWorker for scope ('https://fielder.app/js/push/onesignal/') with script ('https://fielder.app/js/push/onesignal/OneSignalSDKWorkerProd.js?appId=<GUID>&sdkVersion=<NUMBER>'): The script has an unsupported MIME type ('text/html').<br>
+            fielder-worker|5 months old - last seen about 3 hours ago<br>
+            Session replays<br>
+            0
+        </li>
+    </ul>
+</div>
+
+<div class="section notes">
+    <h3>Notes</h3>
+    <ol>
+        <li>New report item showing service vulnerabilities</li>
+        <li>New report item showing application error inboxes</li>
+    </ol>
+</div>
+</body>
+</html>
