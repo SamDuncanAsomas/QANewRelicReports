@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Hour - New Relic Hour Error Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .services {
+            background-color: #ffffcc; /* Yellow */
+        }
+        .staff-hub {
+            background-color: #cceeff; /* Blue */
+        }
+        .worker-app-web {
+            background-color: #ccffcc; /* Green */
+        }
+        .notes {
+            background-color: #ffcccc; /* Red */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .error {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+format this data below as html using this style above, IMPORTANT, you MUST include ALL the data below, 100%  - do not leave ANYTHING OUT
+do not add things like  <!-- More database time consumed entries... -->, <!-- Additional errors... -->, <!-- More database time consumed entries... -->, <!-- Vulnerability details... -->, <!-- More Instatus errors... -->, <!-- More general service errors... -->,   <!-- Staff Hub errors... -->. ,    <!-- Page view load times... -->, <!-- Valid / invalid events... -->,     <!-- Worker App Web errors... -->,   <!-- Page view load times... -->, <!-- Valid / invalid events... -->.,   <!-- More errors listed here... -->,  <!-- Database time consumed entries... -->,   <!-- More sections if present... -->,    <!-- Page view load times... -->, <!-- Valid / invalid events... -->, <!-- Error Inbox Error groups... -->, <!-- Additional sections if present... -->
+YOU MUST DO THIS FOR ME, YOU MUST give me the 100% completed formwith all my data listed below
+
+ <h2>24 Hour  - New Relic Report</h2>
+
+ <div class="section services">
+  <h3>Services</h3>
+<p><strong>Error Inbox [Error Groups: 10] (https://onenr.io/0kjnPeNYzwo)</strong></p>
+<ul>
+
+rest_framework.exceptions:ValidationError
+Expected
+{'course_id': [ErrorDetail(string='This field is required.', code='required')]}
+matching-prod|10 months old - last seen about 4 hours ago
+—
+22
+
+builtins:TimeoutError
+Empty message
+cvjob-prod|3 months old - last seen 28 minutes ago
+—
+21
+
+rest_framework.exceptions:ValidationError
+Expected
+{'level_name': [ErrorDetail(string='"" is not a valid choice.', code='invalid_choice')]}
+worker-prod|5 months old - last seen about 2 hours ago
+—
+4
+
+rest_framework.exceptions:AuthenticationFailed
+Expected
+invalid firebase authentication header
+matching-prod|about 2 months old - last seen about 17 hours ago
+—
+4
+
+DirectusError
+Invalid payload. The refresh token is required in either the payload or cookie.
+directus-prod|12 days old - last seen 33 minutes ago
+—
+2
+
+DirectusError
+You don't have permission to access this.
+directus-prod|12 days old - last seen 32 minutes ago
+—
+2
+
+DirectusError
+Invalid query. You can't filter for an empty string in "_eq". Use "_empty" or "_nempty" instead.
+directus-prod|at least 24 hours old* - last seen about 24 hours ago
+—
+2
+
+utils.rest_utils:Conflict
+Expected
+Organisation s8Gc and worker xQt83tt1NURS8o7At74l1mKEAtK2 are already related a SOURCED relation
+organisation-prod|at least 4 hours old* - last seen about 4 hours ago
+—
+1
+
+rest_framework.exceptions:ValidationError
+Expected
+{'non_field_errors': [ErrorDetail(string='worker_ids or worker_id must be provided', code='invalid')]}
+worker-prod|about 1 month old - last seen about 3 hours ago
+</ul>
+
+<p><strong>Directus Database Time Consumed > Top 5 Offenders (https://chart-embed.service.eu.newrelic.com/herald/3e99c56a-75ad-42ff-b63c-45f570ff6241?height=400px&timepicker=true)</strong></p>
+<ul>
+230K  Postgres, , other
+106K  Postgres, information_schema.columns, select
+125K  Postgres, sourced_job, select
+65.6K Postgres, pg_index, select
+63.2K Postgres, directus_roles, select
+</ul>
+
+<p><strong>Vulnerabilities [Vulnerability Count: 14] (https://one.eu.newrelic.com/vulnerability-management?account=3895982&duration=1800000&state=a6fb3f46-0e26-343a-e701-5690519b8587)</strong></p>
+<ul>
+0 Critical vulnerabilities
+5 High vulnerabilities
+Entity
+	cvjob-prod, python-multipart vulnerable to Content-Type Header ReDoS (CVE-2024-24762)
+	cvjob-prod, Duplicate Advisory: Starlette Content-Type Header ReDoS (GHSA-93gm-qmq6-w238)
+	cvjob-prod, Duplicate Advisory: FastAPI Content-Type Header ReDoS (GHSA-qf9m-vfgh-m389)
+3rd party library status
+	2 highs fastapi, Current version 0.100.1, Suggested version 0.109.1
+	2 highs starlette, Current version 0.27.0, Suggested version 0.36.2
+9   Other vulnerabilities
+</ul>
+
+<p><strong>Instatus [Error Component Count: 3] (https://onenr.io/0nQxW4ADajV)</strong></p>
+<ul>
+15 Generic Platform Service (catch all hooked up by back end team)
+(note 18 service remain un-tracked in new relic)
+8 Indeed
+4 Notification
+</ul>
+
+<p><strong>General Services [Error Group Count: 6] https://onenr.io/0OQMae0EPQG</strong></p>
+<ul>
+1    Worker
+8    Job 
+21   CV Job
+1    Organisation
+272  Directus
+4    Notification
+</ul>
+</div>
+
+ <div class="section staff-hub">
+  <h3>Staff Hub</h3>
+<p><strong>Error Count: 19  (https://onenr.io/0qQag3Dz6R1)</strong></p>
+	<ul>
+	6  firebase is not defined
+	2  pdfjsLib is not defined
+	</ul>
+<p><strong>Page View Load Times (https://onenr.io/0qQag3Dz6R1)</strong></p>
+<ul>
+	1.09(s)  Average page rendering
+	4.6(s)   Average dom processing
+</ul>	
+<p><strong>Valid / invalid events (https://onenr.io/0qQag3Dz6R1)</strong></p>
+<ul>
+	3 Valid
+	1 Bad
+</ul>	
+<p><strong>Error Inbox [Error Groups: 14] (https://onenr.io/0oR8EqeN6jG)</strong></p>
+<ul>
+ReferenceError
+firebase is not defined
+fielder|6 months old - last seen 5 minutes ago
+Session replays
+0
+—
+21
+
+F
+Script error.
+fielder|3 months old - last seen about 7 hours ago
+Session replays
+0
+—
+4
+
+ReferenceError
+pdfjsLib is not defined
+fielder|3 months old - last seen about 7 hours ago
+Session replays
+0
+—
+4
+
+TypeError
+Unhandled Promise Rejection: Failed to fetch
+fielder|9 months old - last seen about 7 hours ago
+Session replays
+0
+</ul>
+</div>
+
+ <div class="section worker-app-web">
+  <h3>Worker App Web</h3>
+<p><strong>Error Count: 1 (https://onenr.io/0OQMae0EPQG)</strong></p>
+<ul>
+	1 Connection to Indexed Database server lost. Refresh the page to try again
+</ul>
+<p><strong>Page View Load Times (https://onenr.io/0OQMae0EPQG)</strong></p>
+<ul>
+	2.96(s)  Average page rendering
+	4.42(s)  Average dom processing
+</ul>
+<p><strong>Valid / invalid events (https://onenr.io/0OQMae0EPQG)</strong></p>
+<ul>
+	8 Valid
+	2 Bad
+</ul>	
+<p><strong>Error Inbox [Error Groups: 1]  (https://onenr.io/02R5qNOkrRb)</strong></p>
+<ul>
+SecurityError
+Failed to register a ServiceWorker for scope ('https://fielder.app/js/push/onesignal/') with script ('https://fielder.app/js/push/onesignal/OneSignalSDKWorkerProd.js?appId=<GUID>&sdkVersion=<NUMBER>'): The script has an unsupported MIME type ('text/html').
+fielder-worker|5 months old - last seen about 7 hours ago
+Session replays
+0
+</ul>
+</div>
+
+ <div class="section notes">
+  <h3>Notes</h3>
+1. New report item showing service vulnerabilities
+2. New report item showing application error inboxes
+</div>
