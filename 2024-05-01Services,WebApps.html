@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Hour - New Relic Hour Error Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .services {
+            background-color: #ffffcc; /* Yellow */
+        }
+        .staff-hub {
+            background-color: #cceeff; /* Blue */
+        }
+        .worker-app-web {
+            background-color: #ccffcc; /* Green */
+        }
+        .worker-app-mobile-android {
+            background-color: #ff9933; /* Orange */
+        }
+        .worker-app-mobile-ios {
+            background-color: #9966ff; /* Purple */
+        }
+        .notes {
+            background-color: #ffcccc; /* Red */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .error {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>24 Hour  - New Relic Report Instatus, Services, Staff Hub, Worker App Web</h2>
+
+<div class="section notes">
+    <h3>Notes</h3>
+</div>
+
+<div class="section services">
+    <h3>Services</h3>
+    <p><strong>Error Inbox [Error Groups: 6] (<a href="https://onenr.io/0kjnPeNYzwo">Link</a>)</strong></p>
+    <ul>
+        <li>Error HttpError 400 directus-prod|3 months old - last seen about 16 hours ago — 459</li>
+        <li>DirectusError Request failed with status code 422 directus-prod|about 8 hours old - last seen about 7 hours ago — 3</li>
+        <li>DirectusError Firebase ID token has expired. Get a fresh ID token from your client app and try again (auth/id-token-expired). See <a href="https://firebase.google.com/docs/auth/admin/verify-id-tokens">here</a> for details on how to retrieve an ID token. directus-prod|at least 13 hours old* - last seen about 13 hours ago — 2</li>
+        <li>DirectusError Invalid payload. The refresh token is required in either the payload or cookie. directus-prod|14 days old - last seen about 4 hours ago — 2</li>
+        <li>DirectusError You don't have permission to access this. directus-prod|14 days old - last seen about 4 hours ago — 2</li>
+        <li>Error select "ip_access" from "directus_roles" where "id" = $1 limit $2 - Connection terminated unexpectedly directus-prod|at least 14 hours old* - last seen about 14 hours ago</li>
+    </ul>
+
+    <p><strong>Directus Database Time Consumed &gt; Top 5 Offenders (<a href="https://chart-embed.service.eu.newrelic.com/herald/3e99c56a-75ad-42ff-b63c-45f570ff6241?height=400px&amp;timepicker=true">Link</a>)</strong></p>
+    <ul>
+        <li>11.8K Postgres, , other</li>
+        <li>7.49K Postgres, information_schema.columns, select</li>
+        <li>10.2K Postgres, sourced_job, select</li>
+        <li>4.74K Postgres, pg_index, select</li>
+        <li>2.35K Postgres, directus_roles, select</li>
+    </ul>
+
+    <p><strong>Vulnerabilities [Vulnerability Count: 14] (<a href="https://one.eu.newrelic.com/vulnerability-management?account=3895982&amp;duration=1800000&amp;state=a6fb3f46-0e26-343a-e701-5690519b8587">Link</a>)</strong></p>
+    <ul>
+        <li>0 Critical vulnerabilities</li>
+        <li>5 High vulnerabilities
+            <ul>
+                <li>Entity cvjob-prod, python-multipart vulnerable to Content-Type Header ReDoS (CVE-2024-24762)</li>
+                <li>Entity cvjob-prod, Duplicate Advisory: Starlette Content-Type Header ReDoS (GHSA-93gm-qmq6-w238)</li>
+                <li>Entity cvjob-prod, Duplicate Advisory: FastAPI Content-Type Header ReDoS (GHSA-qf9m-vfgh-m389)</li>
+            </ul>
+        </li>
+        <li>9 Other vulnerabilities</li>
+    </ul>
+
+    <p><strong>Instatus [Error Component Count: 2] (<a href="https://onenr.io/0nQxW4ADajV">Link</a>)</strong></p>
+    <ul>
+        <li>3 Generic Platform Service (catch all hooked up by back end team) (note 18 service remain un-tracked in new relic)</li>
+        <li>8 Indeed</li>
+        <li>2 Google</li>
+    </ul>
+
+    <p><strong>General Services [Error Group Count: 6] (<a href="https://onenr.io/0OQMae0EPQG">Link</a>)</strong></p>
+    <ul>
+        <li>8 Job</li>
+        <li>51 Directus</li>
+    </ul>
+</div>
+
+<div class="section staff-hub">
+    <h3>Staff Hub</h3>
+    <p><strong>Error Count: 6  (<a href="https://onenr.io/0qQag3Dz6R1">Link</a>)</strong></p>
+    <ul>
+        <li>2 firebase is not defined</li>
+        <li>1 Script error.</li>
+        <li>1 pdfjsLib is not defined</li>
+        <li>1 TypeError: Instance of 'SB': type 'minified:z1' is not a subtype of type 'minified:SB'</li>
+        <li>1 NoSuchMethodError: method not found: 'mp' on null</li>
+    </ul>
+    <p><strong>Page View Load Times (<a href="https://onenr.io/0qQag3Dz6R1">Link</a>)</strong></p>
+    <ul>
+        <li>0.47(s)  Average page rendering</li>
+        <li>4.93(s)  Average dom processing</li>
+    </ul>
+    <p><strong>Valid / invalid events (<a href="https://onenr.io/0qQag3Dz6R1">Link</a>)</strong></p>
+    <ul>
+        <li>8 Valid</li>
+        <li>14 Bad</li>
+    </ul>
+    <p><strong>Error Inbox [Error Groups: 3] (<a href="https://onenr.io/0oR8EqeN6jG">Link</a>)</strong></p>
+    <ul>
+        <li>ReferenceError firebase is not defined fielder|6 months old - last seen 13 minutes ago Session replays 0 — 20</li>
+        <li>F Script error. fielder|3 months old - last seen 13 minutes ago Session replays 0 — 10</li>
+        <li>ReferenceError pdfjsLib is not defined fielder|3 months old - last seen 13 minutes ago Session replays 0</li>
+    </ul>
+</div>
+
+<div class="section worker-app-web">
+    <h3>Worker App Web</h3>
+    <p><strong>Error Count: 0 (<a href="https://onenr.io/0OQMae0EPQG">Link</a>)</strong></p>
+    <ul>
+    </ul>
+    <p><strong>Page View Load Times (<a href="https://onenr.io/0OQMae0EPQG">Link</a>)</strong></p>
+    <ul>
+        <li>11.2(s)  Average page rendering</li>
+        <li>10.7(s)  Average dom processing</li>
+    </ul>
+    <p><strong>Valid / invalid events (<a href="https://onenr.io/0OQMae0EPQG">Link</a>)</strong></p>
+    <ul>
+        <li>2 Valid</li>
+        <li>14 Bad</li>
+    </ul>
+    <p><strong>Error Inbox [Error Groups: 2]  (<a href="https://onenr.io/02R5qNOkrRb">Link</a>)</strong></p>
+    <ul>
+        <li>SecurityError Failed to register a ServiceWorker for scope ('https://fielder.app/js/push/onesignal/') with script ('https://fielder.app/js/push/onesignal/OneSignalSDKWorkerProd.js?appId=&lt;GUID&gt;&amp;sdkVersion=&lt;NUMBER&gt;'): The script has an unsupported MIME type ('text/html'). fielder-worker|6 months old - last seen about 1 hour ago Session replays 0 — 3</li>
+        <li>Error Bad state: No ProviderScope found fielder-worker|about 2 months old - last seen 29 minutes ago Session replays 0</li>
+    </ul>
+</div>
+
+</body>
+</html>
