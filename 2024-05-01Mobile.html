@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Hour - New Relic Hour Error Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .services {
+            background-color: #ffffcc; /* Yellow */
+        }
+        .staff-hub {
+            background-color: #cceeff; /* Blue */
+        }
+        .worker-app-web {
+            background-color: #ccffcc; /* Green */
+        }
+        .worker-app-mobile-android {
+            background-color: #ff9933 /* Orange */
+        }
+        .worker-app-mobile-ios {
+            background-color: #9966ff; /* Purple */
+        }
+        .notes {
+            background-color: #ffcccc; /* Red */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .error {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>24 Hour  - New Relic Report - Mobile Apps</h2>
+    
+    <div class="section notes">
+        <h3>Notes</h3>
+    </div>
+
+    <div class="section worker-app-mobile-android">
+        <h3>Worker App Mobile Droid V 18.3.1</h3>
+        <p><strong>HTTP errors and network failure rate(https://onenr.io/07wkxD95oRL)</strong></p>
+        <ul>
+            <li>13.89% Network failures</li>
+            <li>25% HTTP errors</li>
+        </ul>
+        <p><strong>HTTP response Times (https://onenr.io/0OQMae0EPQG)</strong></p>
+        <ul>
+            <li>3199(ms) firebaseinstallations.googleapis.com</li>
+        </ul>
+        <p><strong>Crash-free user % (https://onenr.io/0OQMae0EPQG)</strong></p>
+        <ul>
+            <li>100%</li>
+        </ul>
+        <p><strong>User adoption (https://onenr.io/0OQMae0EPQG)</strong></p>
+        <ul>
+            <li>75%</li>
+        </ul>   
+        <p><strong>Error Inbox [Error Groups: 33]  (https://onenr.io/02R5qNOkrRb)</strong></p>
+        <ul>
+            <li>package:dio/src/dio_mixin.dart line 372 in DioMixin.request</li>
+            <li>rm.a: DioException [bad response]: null Error: errorType: DioExceptionType.badResponse errorMessage: The request returned an invalid status code of 409. error: DioException [bad response]: The request returned an invalid status code of 409. URI: https://fielder-api-gateway-8lgtl59p.ew.gateway.dev/invitations/uvGN3OpfjRdxnARyRuPG/accept path: https://fielder-api-gateway-8lgtl59p.ew.gateway.dev/invitations/uvGN3OpfjRdxnARyRuPG/accept' requestHeader: {Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwOWY4ZTMzN2ZjNzg1NTE0ZTExMGM2ZDg0N2Y0M2M3NDM1M2U0YWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmllbGRlci1wcm9kLTI4NTcxMiIsImF1ZCI6ImZpZWxkZXItcHJvZC0yODU3MTIiLCJhdXRoX3RpbWUiOjE3MDg3MTc0MTksInVzZXJfaWQiOiJBVnNheE5UYlkxWDRoZ0R2dzFkcElsQlZkdncxIiwic3ViIjoiQVZzYXhOVGJZMVg0aGdEdncxZHBJbEJWZHZ3MSIsImlhdCI6MTcxMDE2NjA5NiwiZXhwIjoxNzEwMTY5Njk2LCJwaG9uZV9udW1iZXIiOiIrNDQ3NTA3MTIxNzIxIiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrNDQ3NTA3MTIxNzIxIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.LwjeNNHj7tcaUHAMug9LICOB7FzewvBswdo7FAEBfO3KILuWaxwTzEbznHpLADTJbxVs09uCTUjDmpH5BD05ZcT-UjLpTb6MwoIuPZHpCr2nr3vS59ny_70egzsGxuRNPiDGGYs1k_uyvBmJ4Xj3S51E-ywTazCnlvS_71IJAgfXejcl6WqgQKmX0LkMhPNUjKDcukcWZESFFl5B_zV0GdkXs4YGIKGSnPza1ma9fGOOTotn7dS3yKll8Dee3wJLAUewLN5I0QpX1TTN0EMfiEA7zY9W5TfshYfwS3yyMcUlcFjQakyzXbFgv3uYYLhB8KjavzXap0hIYZUqqS_dJA, content-type: application/json, Access-Control_Allow_Origin: *, content-length: 2} contentType: application/json requestQueryParams: {} requestData: {} responseStatusCode: 409 responseStatusMessage: Conflict responsePayload: {user_prompt: {title: Required onboarding documents missing, subtitle: Some of the required onboarding documents are missing. Those will need to be signed before you can accept., read_more_button_text: , read_more_action_url: }}</li>
+            <li>fielder-android|about 2 minutes ago package:flutter/src/widgets/navigator.dart line 2315 in NavigatorState.pushNamed</li>
+            <li>rm.a: Error: Bad state: cannot navigate to a named route while disposing.</li>
+        </ul>
+    </div>
+    
+    <div class="section worker-app-mobile-ios">
+        <h3>Worker App Mobile iOS V 18.3.1</h3>
+        <p><strong>HTTP errors and network failure rate(https://onenr.io/07wkxD95oRL)</strong></p>
+        <ul>
+            <li>17.89% Network failures</li>
+            <li>28% HTTP errors</li>
+        </ul>
+        <p><strong>HTTP response Times (https://onenr.io/0OQMae0EPQG)</strong></p>
+        <ul>
+            <li>2199(ms) firebaseinstallations.googleapis.com</li>
+        </ul>
+        <p><strong>Crash-free user % (https://onenr.io/0OQMae0EPQG)</strong></p>
+        <ul>
+            <li>99.5%</li>
+        </ul>
+        <p><strong>User adoption (https://onenr.io/0OQMae0EPQG)</strong></p>
+        <ul>
+            <li>72%</li>
+        </ul>   
+        <p><strong>Error Inbox [Error Groups: 17]  (https://onenr.io/02R5qNOkrRb)</strong></p>
+        <ul>
+            <li>package:dio/src/dio_mixin.dart line 372 in DioMixin.request</li>
+            <li>rm.a: DioException [bad response]: null Error: errorType: DioExceptionType.badResponse errorMessage: The request returned an invalid status code of 409. error: DioException [bad response]: The request returned an invalid status code of 409. URI: https://fielder-api-gateway-8lgtl59p.ew.gateway.dev/invitations/uvGN3OpfjRdxnARyRuPG/accept path: https://fielder-api-gateway-8lgtl59p.ew.gateway.dev/invitations/uvGN3OpfjRdxnARyRuPG/accept' requestHeader: {Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwOWY4ZTMzN2ZjNzg1NTE0ZTExMGM2ZDg0N2Y0M2M3NDM1M2U0YWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmllbGRlci1wcm9kLTI4NTcxMiIsImF1ZCI6ImZpZWxkZXItcHJvZC0yODU3MTIiLCJhdXRoX3RpbWUiOjE3MDg3MTc0MTksInVzZXJfaWQiOiJBVnNheE5UYlkxX3Y0bGt3dlhsQ3diZ29pWUowIiwic3ViIjoiQVZzYXhOVGJZMV92NGxrd3Z4Q3did2lZSjAiLCJpYXQiOjE3MTAxNjYwOTYsImV4cCI6MTcxMDE2OTY5NiwiYXpwIjoiRmllbGRlci1wcm9kLTI4NTcxMiIsInNlc3Npb25fc3RhdGUiOiI4ZTQxZjQ5Zi1iMTc1LTQzNmMtOTVjYS1mZjNmYzZjODIyMmMiLCJhY3IiOiIxIiwiYXV0aF90aW1lIjoxNzAxMTY2MDk2LCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiVVNFUl9FRElUX1JPT1QiXX19.Sa0bfUQhXo4Y8d8ZWW0JtXge-FkrLMY2HRcGKb_pWVtQ9MhGYjyfRxKGR-mZGwsTTyrfoZxAtWGG7R9IRjvD1NwPlv9QGnMJujYg-V3LH1YKd2ycw92A52njmQ9J7sy05RXZ-ZrG5-nCKhV9mlTm4n5vj7cQtBsfPhKwb8ApShzApO_xJKX5aE6AjWAtIe7RYlvmJAOgkHcYEWVCmJc_xOfFA6vlQcveK8Yc7TKwmUVk35nKRsEwhQHlVd2C0nCfL6UzXQywXGRJKlYz4Lty2K4anZzBjwW--lMwKK0iBb2e5mn53yg1o3pjL9wxL7dN3V8y1G2UwzNgbpjw, content-type: application/json, Access-Control_Allow_Origin: *, content-length: 2} contentType: application/json requestQueryParams: {} requestData: {} responseStatusCode: 409 responseStatusMessage: Conflict responsePayload: {user_prompt: {title: Required onboarding documents missing, subtitle: Some of the required onboarding documents are missing. Those will need to be signed before you can accept., read_more_button_text: , read_more_action_url: }}</li>
+            <li>fielder-ios|about 2 minutes ago package:flutter/src/widgets/navigator.dart line 2315 in NavigatorState.pushNamed</li>
+            <li>rm.a: Error: Bad state: cannot navigate to a named route while disposing.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
