@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Hour - New Relic Hour Error Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .services {
+            background-color: #ffffcc; /* Yellow */
+        }
+        .staff-hub {
+            background-color: #cceeff; /* Blue */
+        }
+        .worker-app-web {
+            background-color: #ccffcc; /* Green */
+        }
+        .worker-app-mobile-android {
+            background-color: #ff9933; /* Orange */
+        }
+        .worker-app-mobile-ios {
+            background-color: #9966ff; /* Purple */
+        }
+        .notes {
+            background-color: #ffcccc; /* Red */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .error {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>24 Hour - New Relic Report Instatus, Services, Staff Hub, Worker App Web</h2>
+
+<div class="section notes">
+    <h3>Notes</h3>
+    <ul>
+        <li>Very low application use (User adoption 0%)</li>
+        <li>Spike in staff hub Average dom processing 6.89(s)</li>
+        <li>Spike in worker web Average dom processing 19.8(s)</li>
+    </ul>
+</div>
+
+<div class="section services">
+    <h3>Services</h3>
+    <p><strong>Error Inbox [Error Groups: 3] (<a href="https://onenr.io/0kjnPeNYzwo">https://onenr.io/0kjnPeNYzwo</a>)</strong></p>
+    <ul>
+        <li>DirectusError<br>You don't have permission to access this.<br>directus-prod|15 days old - last seen about 2 hours ago</li>
+        <li>DirectusError<br>Invalid payload. The refresh token is required in either the payload or cookie.<br>directus-prod|15 days old - last seen about 2 hours ago</li>
+        <li>DirectusError<br>Request failed with status code 422<br>directus-prod|1 day old - last seen about 1 hour ago</li>
+    </ul>
+
+    <p><strong>Directus Database Time Consumed &gt; Top 5 Offenders (<a href="https://chart-embed.service.eu.newrelic.com/herald/3e99c56a-75ad-42ff-b63c-45f570ff6241?height=400px&amp;timepicker=true">https://chart-embed.service.eu.newrelic.com/herald/3e99c56a-75ad-42ff-b63c-45f570ff6241?height=400px&amp;timepicker=true</a>)</strong></p>
+    <ul>
+        <li>11.8K Postgres, , other</li>
+        <li>7.49K Postgres, information_schema.columns, select</li>
+        <li>10.2K Postgres, sourced_job, select</li>
+        <li>4.74K Postgres, pg_index, select</li>
+        <li>2.35K Postgres, directus_roles, select</li>
+    </ul>
+
+    <p><strong>Vulnerabilities [Vulnerability Count: 14] (<a href="https://one.eu.newrelic.com/vulnerability-management?account=3895982&amp;duration=1800000&amp;state=a6fb3f46-0e26-343a-e701-5690519b8587">https://one.eu.newrelic.com/vulnerability-management?account=3895982&amp;duration=1800000&amp;state=a6fb3f46-0e26-343a-e701-5690519b8587</a>)</strong></p>
+    <ul>
+        <li>0 Critical vulnerabilities</li>
+        <li>5 High vulnerabilities</li>
+        <li>Entity<br>cvjob-prod, python-multipart vulnerable to Content-Type Header ReDoS (CVE-2024-24762)</li>
+        <li>cvjob-prod, Duplicate Advisory: Starlette Content-Type Header ReDoS (GHSA-93gm-qmq6-w238)</li>
+        <li>cvjob-prod, Duplicate Advisory: FastAPI Content-Type Header ReDoS (GHSA-qf9m-vfgh-m389)</li>
+        <li>3rd party library status<br>2 highs fastapi, Current version 0.100.1, Suggested version 0.109.1<br>2 highs starlette, Current version 0.27.0, Suggested version 0.36.2<br>9 Other vulnerabilities</li>
+    </ul>
+
+    <p><strong>Instatus [Error Component Count: 2] (<a href="https://onenr.io/0nQxW4ADajV">https://onenr.io/0nQxW4ADajV</a>)</strong></p>
+    <ul>
+        <li>4 Generic Platform Service (catch all hooked up by back end team)</li>
+        <li>8 Indeed</li>
+        <li>1 Google</li>
+    </ul>
+
+    <p><strong>General Services [Error Group Count: 6] <a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a></strong></p>
+    <ul>
+        <li>8 Job</li>
+        <li>2 Assistant</li>
+        <li>3 Directus</li>
+    </ul>
+</div>
+
+<div class="section staff-hub">
+    <h3>Staff Hub</h3>
+    <p><strong>Error Count: 6 (<a href="https://onenr.io/0qQag3Dz6R1">https://onenr.io/0qQag3Dz6R1</a>)</strong></p>
+    <ul>
+        <li>1 firebase is not defined</li>
+        <li>2 pdfjsLib is not defined</li>
+        <li>1 script not ready</li>
+        <li>Warning Violations</li>
+    </ul>
+    <p><strong>Page View Load Times (<a href="https://onenr.io/0qQag3Dz6R1">https://onenr.io/0qQag3Dz6R1</a>)</strong></p>
+    <ul>
+        <li>0.42(s) Average page rendering</li>
+        <li>6.89(s) Average dom processing</li>
+    </ul>
+    <p><strong>Valid / invalid events (<a href="https://onenr.io/0qQag3Dz6R1">https://onenr.io/0qQag3Dz6R1</a>)</strong></p>
+    <ul>
+        <li>5 Valid</li>
+        <li>8 Bad</li>
+    </ul>
+    <p><strong>Error Inbox [Error Groups: 5] (<a href="https://onenr.io/0oR8EqeN6jG">https://onenr.io/0oR8EqeN6jG</a>)</strong></p>
+    <ul>
+        <li>ReferenceError<br>firebase is not defined<br>fielder|6 months old - last seen 11 minutes ago<br>Session replays 0</li>
+        <li>F<br>Script error.<br>fielder|3 months old - last seen about 2 hours ago<br>Session replays 0</li>
+        <li>ReferenceError<br>pdfjsLib is not defined<br>fielder|3 months old - last seen about 2 hours ago<br>Session replays 0</li>
+        <li>Error<br>NoSuchMethodError: method not found: 'ax' on null<br>fielder|about 1 month old - last seen 7 days ago<br>Session replays 0</li>
+        <li>Error<br>NoSuchMethodError: method not found: 'ay' on null<br>fielder|about 1 month old - last seen 7 days ago</li>
+    </ul>
+</div>
+
+<div class="section worker-app-web">
+    <h3>Worker App Web</h3>
+    <p><strong>Error Count: 2 (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul>
+        <li>1 Failed to register a ServiceWorker</li>
+        <li>1 Bad state</li>
+    </ul>
+    <p><strong>Page View Load Times (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul>
+        <li>1.4(s) Average page rendering</li>
+        <li>19.8(s) Average dom processing</li>
+    </ul>
+    <p><strong>Valid / invalid events (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul>
+        <li>1 Valid</li>
+        <li>8 Bad</li>
+    </ul>
+    <p><strong>Error Inbox [Error Groups: 1] (<a href="https://onenr.io/02R5qNOkrRb">https://onenr.io/02R5qNOkrRb</a>)</strong></p>
+    <ul>
+        <li>SecurityError<br>Failed to register a ServiceWorker for scope ('https://fielder.app/js/push/onesignal/') with script ('https://fielder.app/js/push/onesignal/OneSignalSDKWorkerProd.js?appId=&lt;GUID&gt;&amp;sdkVersion=&lt;NUMBER&gt;'): The script has an unsupported MIME type ('text/html').<br>fielder-worker|6 months old - last seen about 21 hours ago<br>Session replays 0</li>
+    </ul>
+</div>
+
+</body>
+</html>
