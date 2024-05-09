@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Hour - New Relic Hour Error Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .services {
+            background-color: #ffffcc; /* Yellow */
+        }
+        .staff-hub {
+            background-color: #cceeff; /* Blue */
+        }
+        .worker-app-web {
+            background-color: #ccffcc; /* Green */
+        }
+        .worker-app-mobile-android {
+            background-color: #ff9933 /* Orange */
+        }
+        .worker-app-mobile-ios {
+            background-color: #9966ff; /* Purple */
+        }
+        .notes {
+            background-color: #ffcccc; /* Red */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .error {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>24 Hour  - New Relic Report Instatus, Services, Staff Hub, Worker App Web</h2>
+ 
+<div class="section notes">
+    <h3>Notes</h3>
+    <ol>
+        <li>low application use</li>
+        <li>Spike in indeed, google, josd and directus errors</li>
+    </ol>
+</div>
+
+<div class="section services">
+    <h3>Services</h3>
+    <p><strong>Error Inbox [Error Groups: 3] (<a href="https://onenr.io/0kjnPeNYzwo">https://onenr.io/0kjnPeNYzwo</a>)</strong></p>
+    <ul>
+        <li>Error<br>HttpError 500<br>directus-prod|3 months old - last seen 9 minutes ago<br>—<br>79</li>
+        <li>KnexTimeoutError<br>Knex: Timeout acquiring a connection. The pool is probably full. Are you missing a .transacting(trx) call?<br>directus-prod|about 5 hours old - last seen about 4 hours ago<br>—<br>31</li>
+        <li>DirectusError<br>You don't have permission to access this.<br>directus-prod|22 days old - last seen about 11 hours ago</li>
+    </ul>
+    <p><strong>Directus Database Time Consumed &gt; Top 5 Offenders (<a href="https://chart-embed.service.eu.newrelic.com/herald/3e99c56a-75ad-42ff-b63c-45f570ff6241?height=400px&timepicker=true">https://chart-embed.service.eu.newrelic.com/herald/3e99c56a-75ad-42ff-b63c-45f570ff6241?height=400px&timepicker=true</a>)</strong></p>
+    <ul>
+        <li>29.5K Postgres, , other</li>
+    </ul>
+    <p><strong>Vulnerabilities [Vulnerability Count: 14] (<a href="https://onenr.io/0Bj3xY6AGQX">https://onenr.io/0Bj3xY6AGQX</a>)</strong></p>
+    <ul>
+        <li>assistant-prod<br>Account 3895982<br>8</li>
+        <li>job-dev<br>Account 3895982<br>6</li>
+        <li>matching-dev<br>Account 3895982<br>6</li>
+    </ul>
+    <p><strong>Instatus [Error Component Count: 2] (<a href="https://onenr.io/0nQxW4ADajV">https://onenr.io/0nQxW4ADajV</a>)</strong></p>
+    <ul>
+        <li>4 Generic Platform Service (catch all hooked up by back end team)<br>(note 18 service remain un-tracked in new relic)</li>
+        <li>36 Indeed</li>
+        <li>62 Google</li>
+    </ul>
+    <p><strong>General Services [Error Group Count: 6] <a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a></strong></p>
+    <ul>
+        <li>36 Job</li>
+        <li>144 Directus</li>
+    </ul>
+</div>
+
+<div class="section staff-hub">
+    <h3>Staff Hub</h3>
+    <p><strong>Error Count: 0  (<a href="https://onenr.io/0VwggPbOowJ">https://onenr.io/0VwggPbOowJ</a>)</strong></p>
+    <ul>
+        <p><strong>Page View Load Times (<a href="https://onenr.io/0qQag3Dz6R1">https://onenr.io/0qQag3Dz6R1</a>)</strong></p>
+        <ul>
+            <li>0.54(s)  Average page rendering</li>
+            <li>2.98(s)  Average dom processing</li>
+        </ul>
+        <p><strong>Valid / invalid events (<a href="https://onenr.io/0qQag3Dz6R1">https://onenr.io/0qQag3Dz6R1</a>)</strong></p>
+        <ul>
+            <li>11 Valid</li>
+            <li>13 Bad</li>
+        </ul>
+        <p><strong>Error Inbox [Error Groups: 7] (<a href="https://onenr.io/0oR8EqeN6jG">https://onenr.io/0oR8EqeN6jG</a>)</strong></p>
+        <ul>
+            <li>ReferenceError<br>firebase is not defined<br>fielder|6 months old - last seen 24 minutes ago<br>Session replays<br>0<br>—<br>16</li>
+            <li>F<br>Script error.<br>fielder|3 months old - last seen about 2 hours ago<br>Session replays<br>0<br>—<br>5</li>
+            <li>ReferenceError<br>pdfjsLib is not defined<br>fielder|3 months old - last seen about 2 hours ago<br>Session replays<br>0<br>—<br>5</li>
+            <li>WrappedError<br>Unhandled Promise Rejection: Retries exceeded<br>fielder|5 months old - last seen about 14 hours ago<br>Session replays<br>0<br>—<br>4</li>
+            <li>Error<br>MissingPluginException(No implementation found for method Crashlytics#recordError on channel plugins.flutter.io/firebase_crashlytics)<br>fielder|9 months old - last seen about 8 hours ago<br>Session replays<br>0<br>—<br>2</li>
+            <li>Error<br>NoSuchMethodError: method not found: 'ax' on null<br>fielder|about 1 month old - last seen about 22 hours ago<br>Session replays<br>0</li>
+            <li>Error<br>NoSuchMethodError: method not found: 'ay' on null<br>fielder|about 1 month old - last seen about 22 hours ago<br>Session replays<br>0</li>
+        </ul>
+    </ul>
+</div>
+
+<div class="section worker-app-web">
+    <h3>Worker App Web</h3>
+    <p><strong>Error Count: 0 (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul></ul>
+    <p><strong>Page View Load Times (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul>
+        <li>2.42(s)  Average page rendering</li>
+        <li>2.56(s) Average dom processing</li>
+    </ul>
+    <p><strong>Valid / invalid events (<a href="https://onenr.io/0OQMae0EPQG">https://onenr.io/0OQMae0EPQG</a>)</strong></p>
+    <ul>
+        <li>2 Valid</li>
+        <li>13 Bad</li>
+    </ul>
+    <p><strong>Error Inbox [Error Groups: 0]  (<a href="https://onenr.io/02R5qNOkrRb">https://onenr.io/02R5qNOkrRb</a>)</strong></p>
+    <ul></ul>
+</div>
+
+</body>
+</html>
