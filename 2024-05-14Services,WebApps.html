@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>24 Hour - New Relic Hour Error Report</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           line-height: 1.6;
+           margin: 20px;
+       }
+       h2 {
+           color: #333;
+       }
+       .section {
+           margin-bottom: 30px;
+           padding: 10px;
+           border-radius: 5px;
+       }
+       .services {
+           background-color: #ffffcc; /* Yellow */
+       }
+       .staff-hub {
+           background-color: #cceeff; /* Blue */
+       }
+       .worker-app-web {
+           background-color: #ccffcc; /* Green */
+       }
+       .worker-app-mobile-android {
+           background-color: #ff9933 /* Orange */
+       }
+       .worker-app-mobile-ios {
+           background-color: #9966ff; /* Purple */
+       }
+       .notes {
+           background-color: #ffcccc; /* Red */
+           padding: 10px;
+           border-radius: 5px;
+       }
+       .error {
+           padding: 10px;
+           margin-bottom: 10px;
+       }
+   </style>
+</head>
+<body>
+   <h2>24 Hour  - New Relic Report Instatus, Services, Staff Hub, Worker App Web</h2>
+   <div class="section notes">
+       <h3>Notes</h3>
+       <p>1. Massive spike in Staff hub error count (1.4K MissingPluginException)</p>
+       <p>2. Application dom adv. page view load times still worryingly high</p>
+   </div>
+   <div class="section services">
+       <h3>Services</h3>
+       <p><strong>Error Inbox [Error Groups: 5] (https://onenr.io/0kjnPeNYzwo)</strong></p>
+       <ul>
+           <li>openai:RateLimitError<br>Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}<br>cvjob-prod|24 days old - last seen about 21 hours ago<br>—<br>867</li>
+           <li>requests.exceptions:HTTPError<br>400 Client Error: Bad Request for url: https://organisation-u7vmwftkma-nw.a.run.app/owr-relation<br>worker-prod|3 months old - last seen 9 minutes ago<br>—<br>22</li>
+           <li>openai:RateLimitError<br>Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}<br>assistant-prod|about 23 hours old - last seen about 21 hours ago<br>—<br>3</li>
+           <li>DirectusError<br>You don't have permission to access this.<br>directus-prod|27 days old - last seen about 2 hours ago<br>—<br>2</li>
+           <li>openai:InternalServerError<br>Error code: 500 - {'error': {'message': 'Internal server error', 'type': 'auth_subrequest_error', 'param': None, 'code': 'internal_error'}}<br>cvjob-prod|at least 23 hours old* - last seen about 23 hours ago</li>
+       </ul>
+       <p><strong>Instatus [Error Component Count: 2] (https://onenr.io/0nQxW4ADajV)</strong></p>
+       <ul>
+           <li>0 Generic Platform Service (catch all hooked up by back end team)</li>
+           <li>(note 18 service remain un-tracked in new relic)</li>
+           <li>4  Indeed</li>
+       </ul>
+       <p><strong>General Services [Error Group Count: 6] https://onenr.io/0OQMae0EPQG</strong></p>
+       <ul>
+           <li>3     Worker</li>
+           <li>4     Job</li>
+           <li>279   Cv Job</li>
+           <li>3     Assistant</li>
+           <li>479   Directus</li>
+       </ul>
+   </div>
+   <div class="section staff-hub">
+       <h3>Staff Hub</h3>
+       <p><strong>Error Count: 1.4K  (https://onenr.io/0VwggPbOowJ)</strong></p>
+       <ul>
+           <li>1.4K MissingPluginException(No impleme</li>
+       </ul>
+       <p><strong>Page View Load Times (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>5.85s DOM processing</li>
+           <li>0.69s Page rendering</li>
+       </ul>
+       <p><strong>Valid / invalid events (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>13 Bad</li>
+           <li>5 Valid</li>
+       </ul>
+       <p><strong>Error Inbox [Error Groups: 6] (https://onenr.io/0oR8EqeN6jG)</strong></p>
+       <ul>
+           <li>Error<br>MissingPluginException(No implementation found for method Crashlytics#recordError on channel plugins.flutter.io/firebase_crashlytics)<br>fielder|9 months old - last seen 15 minutes ago<br>Session replays<br>0<br>—<br>2.57k</li>
+           <li>ReferenceError<br>firebase is not defined<br>fielder|6 months old - last seen 15 minutes ago<br>Session replays<br>0<br>—<br>21</li>
+           <li>F<br>Script error.<br>fielder|3 months old - last seen about 2 hours ago<br>Session replays<br>0<br>—<br>9</li>
+           <li>ReferenceError<br>pdfjsLib is not defined<br>fielder|3 months old - last seen about 2 hours ago<br>Session replays<br>0<br>—<br>9</li>
+           <li>TypeError<br>Cannot read properties of null (reading 'td')<br>fielder|at least 3 hours old* - last seen about 3 hours ago<br>Session replays<br>0<br>—<br>2</li>
+           <li>Error<br>NoSuchMethodError: method not found: 'toString' on null<br>fielder|7 months old - last seen about 19 hours ago<br>Session replays<br>0</li>
+       </ul>
+   </div>
+   <div class="worker-app-web">
+       <h3>Worker App Web</h3>
+       <p><strong>Error Count: 12  (https://onenr.io/0VwggPbOowJ)</strong></p>
+       <ul>
+           <li>12 null is not an object (evaluating '</li>
+       </ul>
+       <p><strong>Page View Load Times (https://onenr.io/0qQag3Dz6R1)</strong></p>
+<ul>
+	 <li>8.31s DOM processing
+     <li>0.59s Page rendering
+</ul>	
+<p><strong>Valid / invalid events (https://onenr.io/0qQag3Dz6R1)</strong></p>
+<ul>
+	 <li>16 Bad
+     <li>1 Valid
+</ul>	
+<p><strong>Error Inbox [Error Groups: 2] (https://onenr.io/0oR8EqeN6jG)</strong></p>
+<ul>
+ <li>Error
+Bad state: Cannot use "ref" after the widget was disposed.
+fielder-worker|4 days old - last seen about 16 hours ago
+Session replays
+0
+—
+3
+
+ <li>SecurityError
+Failed to register a ServiceWorker for scope ('https://fielder.app/js/push/onesignal/') with script ('https://fielder.app/js/push/onesignal/OneSignalSDKWorkerProd.js?appId=<GUID>&sdkVersion=<NUMBER>'): The script has an unsupported MIME type ('text/html').
+fielder-worker|6 months old - last seen about 9 hours ago
+Session replays
+1
+</ul>
+</div>
+
+</div>
