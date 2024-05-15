@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>24 Hour - New Relic Hour Error Report</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           line-height: 1.6;
+           margin: 20px;
+       }
+       h2 {
+           color: #333;
+       }
+       .section {
+           margin-bottom: 30px;
+           padding: 10px;
+           border-radius: 5px;
+       }
+       .services {
+           background-color: #ffffcc; /* Yellow */
+       }
+       .staff-hub {
+           background-color: #cceeff; /* Blue */
+       }
+       .worker-app-web {
+           background-color: #ccffcc; /* Green */
+       }
+       .worker-app-mobile-android {
+           background-color: #ff9933 /* Orange */
+       }
+       .worker-app-mobile-ios {
+           background-color: #9966ff; /* Purple */
+       }
+       .notes {
+           background-color: #ffcccc; /* Red */
+           padding: 10px;
+           border-radius: 5px;
+       }
+       .error {
+           padding: 10px;
+           margin-bottom: 10px;
+       }
+   </style>
+</head>
+<body>
+   <h2>24 Hour  - New Relic Report Instatus, Services, Staff Hub, Worker App Web</h2>
+   <div class="section notes">
+       1. MASSIVE Worker App Web dom processing adv page load time (36.9s)
+       <h3>Notes</h3>
+   </div>
+   <div class="section services">
+       <h3>Services</h3>
+       <p><strong>Error Inbox [Error Groups: 2] (https://onenr.io/0kjnPeNYzwo)</strong></p>
+       <ul>
+           <li>requests.exceptions:HTTPError<br>400 Client Error: Bad Request for url: https://organisation-u7vmwftkma-nw.a.run.app/owr-relation<br>worker-prod|3 months old - last seen 16 minutes ago<br>—<br>20</li>
+           <li>DirectusError<br>You don't have permission to access this.<br>directus-prod|28 days old - last seen about 3 hours ago<br>—<br>3</li>
+           <li>Error<br>HttpError 500<br>directus-prod|3 months old - last seen 14 minutes ago</li>
+       </ul>
+       <p><strong>Instatus [Error Component Count: 6] (https://onenr.io/0nQxW4ADajV)</strong></p>
+       <ul>
+           <li>0 Generic Platform Service (catch all hooked up by back end team)<br>(note 18 service remain un-tracked in new relic)</li>
+           <li>3     DBS</li>
+           <li>1     Google</li>
+       </ul>
+       <p><strong>General Services [Error Group Count: 6] https://onenr.io/0OQMae0EPQG</strong></p>
+       <ul>
+           <li>6     Job</li>
+           <li>2     Assistant</li>
+           <li>195   Directus</li>
+           <li>4     Notification</li>
+       </ul>
+   </div>
+   <div class="section staff-hub">
+       <h3>Staff Hub</h3>
+       <p><strong>Error Groups: 1 (https://onenr.io/0VwggPbOowJ)</strong></p>
+       <ul>
+           <li>646 MissingPluginException(No impleme</li>
+       </ul>
+       <p><strong>Page View Load Times (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>6.14s DOM processing</li>
+           <li>6s    Page rendering</li>
+       </ul>
+       <p><strong>Valid / invalid events (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>23 Bad</li>
+           <li>10 Valid</li>
+       </ul>
+       <p><strong>Error Inbox [Error Groups: 8] (https://onenr.io/0oR8EqeN6jG)</strong></p>
+       <ul>
+           <li>Error<br>MissingPluginException(No implementation found for method Crashlytics#recordError on channel plugins.flutter.io/firebase_crashlytics)<br>fielder|9 months old - last seen 20 minutes ago<br>Session replays<br>0<br>—<br>1.23k</li>
+           <li>ReferenceError<br>firebase is not defined<br>fielder|6 months old - last seen 20 minutes ago<br>Session replays<br>0<br>—<br>37</li>
+           <li>F<br>Script error.<br>fielder|3 months old - last seen 20 minutes ago<br>Session replays<br>0<br>—<br>11</li>
+           <li>ReferenceError<br>pdfjsLib is not defined<br>fielder|3 months old - last seen 20 minutes ago<br>Session replays<br>0<br>—<br>11</li>
+           <li>Error<br>TypeError: Instance of 'Sq': type 'minified:yT' is not a subtype of type 'minified:Sq'<br>fielder|about 4 hours old - last seen about 4 hours ago<br>Session replays<br>0<br>—<br>2</li>
+           <li>WrappedError<br>Unhandled Promise Rejection: Retries exceeded<br>fielder|5 months old - last seen about 21 hours ago<br>Session replays<br>0<br>—<br>1</li>
+           <li>TypeError<br>Cannot read properties of null (reading 'td')<br>fielder|1 day old - last seen about 18 hours ago<br>Session replays<br>0<br>—<br>1</li>
+           <li>TypeError<br>Unhandled Promise Rejection: Failed to fetch<br>fielder|9 months old - last seen about 2 hours ago<br>Session replays<br>0<br>—<br>1</li>
+       </ul>
+   </div>
+   <div class="worker-app-web">
+       <h3>Worker App Web</h3>
+       <p><strong>Error Groups: 3  (https://onenr.io/0VwggPbOowJ)</strong></p>
+       <ul>
+           <li>2 Failed to register a ServiceWorker for scope</li>
+           <li>2 Bad state: Cannot use "ref" after the widget was disposed.</li>
+           <li>1 Cannot redefine property: adoptedStyleSheets</li>
+       </ul>
+       <p><strong>Page View Load Times (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>36.9s DOM processing</li>
+           <li>2.4s Page rendering</li>
+       </ul>
+       <p><strong>Valid / invalid events (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>20 Bad</li>
+           <li>2 Valid</li>
+       </ul>
+       <p><strong>Error Inbox [Error Groups: 3] (https://onenr.io/0oR8EqeN6jG)</strong></p>
+       <ul>
+ <ul>
+ <li>SecurityError
+Failed to register a ServiceWorker for scope ('https://fielder.app/js/push/onesignal/') with script ('https://fielder.app/js/push/onesignal/OneSignalSDKWorkerProd.js?appId=<GUID>&sdkVersion=<NUMBER>'): The script has an unsupported MIME type ('text/html').
+fielder-worker|6 months old - last seen about 3 hours ago
+Session replays
+3
+—
+8
+
+ <li>Error
+Bad state: Cannot use "ref" after the widget was disposed.
+fielder-worker|5 days old - last seen about 21 hours ago
+Session replays
+0
+—
+2
+
+ <li>TypeError
+Cannot redefine property: adoptedStyleSheets
+fielder-worker|8 days old - last seen about 17 hours ago
+Session replays
+0
+</ul>
+</div>
+
+</div>
