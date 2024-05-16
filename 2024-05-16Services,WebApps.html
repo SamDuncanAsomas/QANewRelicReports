@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>24 Hour - New Relic Hour Error Report</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           line-height: 1.6;
+           margin: 20px;
+       }
+       h2 {
+           color: #333;
+       }
+       .section {
+           margin-bottom: 30px;
+           padding: 10px;
+           border-radius: 5px;
+       }
+       .services {
+           background-color: #ffffcc; /* Yellow */
+       }
+       .staff-hub {
+           background-color: #cceeff; /* Blue */
+       }
+       .worker-app-web {
+           background-color: #ccffcc; /* Green */
+       }
+       .worker-app-mobile-android {
+           background-color: #ff9933 /* Orange */
+       }
+       .worker-app-mobile-ios {
+           background-color: #9966ff; /* Purple */
+       }
+       .notes {
+           background-color: #ffcccc; /* Red */
+           padding: 10px;
+           border-radius: 5px;
+       }
+       .error {
+           padding: 10px;
+           margin-bottom: 10px;
+       }
+   </style>
+</head>
+<body>
+   <h2>24 Hour  - New Relic Report Instatus, Services, Staff Hub, Worker App Web</h2>
+   
+   <div class="section notes">
+       1. low application use
+       <h3>Notes</h3>
+   </div>
+
+   <div class="section services">
+       <h3>Services</h3>
+       <p><strong>Error Inbox [Error Groups: 2] (https://onenr.io/0kjnPeNYzwo)</strong></p>
+       <ul>
+           <li>requests.exceptions:HTTPError
+               400 Client Error: Bad Request for url: https://organisation-u7vmwftkma-nw.a.run.app/owr-relation
+               worker-prod|3 months old - last seen 29 minutes ago
+               —
+               24
+           </li>
+           <li>DirectusError
+               You don't have permission to access this.
+               directus-prod|29 days old - last seen about 4 hours ago
+           </li>
+       </ul>
+
+       <p><strong>General Services [Error Group Count: 6] https://onenr.io/0OQMae0EPQG</strong></p>
+       <ul>
+           <li>5     Worker</li>
+           <li>9     Job</li>
+           <li>1     Assistant</li>
+           <li>262   Directus</li>
+       </ul>
+   </div>
+
+   <div class="section staff-hub">
+       <h3>Staff Hub</h3>
+       <p><strong>Error Groups: 5 (https://onenr.io/0VwggPbOowJ)</strong></p>
+       <ul>
+           <li>41 MissingPluginException(No implementation found for method Crashlytics#recordError on channel plugins.flutter.io/firebase_crashlytics)</li>
+           <li>4 firebase is not defined</li>
+           <li>1 Script error.</li>
+           <li>1 pdfjsLib is not defined</li>
+           <li>1 Unhandled Promise Rejection: Retries exceeded</li>
+       </ul>
+       <p><strong>Page View Load Times (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>11.7s DOM processing</li>
+           <li>1.15s    Page rendering</li>
+       </ul>
+       <p><strong>Valid / invalid events (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>9 Bad</li>
+           <li>4 Valid</li>
+       </ul>
+       <p><strong>Error Inbox [Error Groups: 7] (https://onenr.io/0oR8EqeN6jG)</strong></p>
+       <ul>
+           <li>Error
+               MissingPluginException(No implementation found for method Crashlytics#recordError on channel plugins.flutter.io/firebase_crashlytics)
+               fielder|9 months old - last seen about 4 hours ago
+               Session replays
+               0
+               —
+               66
+           </li>
+           <li>ReferenceError
+               firebase is not defined
+               fielder|6 months old - last seen about 4 hours ago
+               Session replays
+               0
+               —
+               14
+           </li>
+           <li>F
+               Script error.
+               fielder|3 months old - last seen about 4 hours ago
+               Session replays
+               0
+               —
+               6
+           </li>
+           <li>ReferenceError
+               pdfjsLib is not defined
+               fielder|3 months old - last seen about 4 hours ago
+               Session replays
+               0
+               —
+               6
+           </li>
+           <li>WrappedError
+               Unhandled Promise Rejection: Retries exceeded
+               fielder|5 months old - last seen about 22 hours ago
+               Session replays
+               0
+               —
+               4
+           </li>
+           <li>TypeError
+               this.a.c is null
+               fielder|4 months old - last seen about 21 hours ago
+               Session replays
+               0
+               —
+               1
+           </li>
+           <li>Error
+               TypeError: Instance of 'Sq': type 'minified:yT' is not a subtype of type 'minified:Sq'
+               fielder|1 day old - last seen about 22 hours ago
+               Session replays
+               0
+               —
+               1
+               Query your data
+           </li>
+       </ul>
+   </div>
+   <div class="worker-app-web">
+       <h3>Worker App Web</h3>
+       <p><strong>Error Groups: 1  (https://onenr.io/0VwggPbOowJ)</strong></p>
+       <ul>
+           <li>1 Failed to register a ServiceWorker for scope ('https://fielder.app/js/push/onesignal/') with script ('https://fielder.app/js/pu</li>
+       </ul>
+       <p><strong>Page View Load Times (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>14.2s DOM processing</li>
+           <li>4.46s Page rendering</li>
+       </ul>
+       <p><strong>Valid / invalid events (https://onenr.io/0qQag3Dz6R1)</strong></p>
+       <ul>
+           <li>9 Bad</li>
+           <li>2 Valid</li>
+       </ul>
+       <p><strong>Error Inbox [Error Groups: 1] (https://onenr.io/0oR8EqeN6jG)</strong></p>
+       <ul>
+           <li>SecurityError
+               Failed to register a ServiceWorker for scope ('https://fielder.app/js/push/onesignal/') with script ('https://fielder.app/js/push/onesignal/OneSignalSDKWorkerProd.js?appId=<GUID>&sdkVersion=<NUMBER>'): The script has an unsupported MIME type ('text/html').
+               fielder-worker|6 months old - last seen about 24 hours ago
+               Session replays
+               0
+           </li>
+       </ul>
+   </div>
+</body>
+</html>
